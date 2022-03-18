@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/869e18f533.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>PortFolio</title>
+  </head>
+  <body>
+    <nav class="navbar" id="navbarId">
+      <div class="container">
+        <div class="logo">
+          <a href="#">Portfo<span>lio.</span></a>
+        </div>
+        <ul class="menu" id="menuId">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#">contact Me</a></li>
+        </ul>
+        <div class="menu-btn" onclick="showmenu()">
+          <i class="fa-solid fa-bars" id="menubar"></i>
+        </div>
+      </div>
+    </nav>
+    <!-- home Section -->
+    <section class="home" id="home">
+      <div class="container">
+        <div class="txt-content">
+          <div class="txt1">Hey there!!!My name is</div>
+          <div class="txt2">Ishika Ghosh</div>
+          <div class="txt3">I am a <span>Web Developer.</span></div>
+          <a href="#" class="btn">Hire Me</a>
+        </div>
+      </div>
+    </section>
+    <!-- about section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="title">About Me</h2>
+
+        <div class="about-content">
+          <div class="col-left">
+            <div class="profile-picture">
+              <!-- <img src="./myImg.jpg" alt="" /> -->
+              <div class="background"></div>
+            </div>
+          </div>
+          <div class="col-right">
+            <h2 class="heading">Know about me <span>Development</span></h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
+              corrupti voluptate natus illum aperiam doloribus asperiores
+              laborum ad alias est quisquam libero esse, nam officia odio
+              corporis eaque sapiente accusantium! Perspiciatis doloremque
+              reprehenderit tenetur, amet ab quas suscipit repellendus et
+              officiis vel asperiores id, ipsum architecto, enim nisi nihil ad.
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Provident at rerum sunt enim sapiente odio, veritatis assumenda
+              pariatur minima aliquid.
+            </p>
+            <a href="#" class="btn">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skill section -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="title">My Skills</h2>
+        <div class="skill-content">
+          <div class="column-left">
+            <h2 class="heading">About my Knowledge and experience</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Assumenda, possimus nulla. Quasi minus accusantium minima optio
+              beatae architecto nesciunt maxime quia reprehenderit, doloribus
+              molestiae voluptate dolore praesentium vero voluptatum sed
+              consequuntur fugiat fugit non veritatis. Praesentium ea culpa
+              impedit repellendus debitis rem? Vitae quo ipsa sint veniam ab eos
+              molestiae.
+            </p>
+            <a href="#" class="btn">Know More</a>
+          </div>
+          <div class="column-right">
+            <div class="bars">
+              <div class="info"><span><i class="fa-brands fa-html5" style="color: white;"></i>HTML</span><span class="num">90%</span></div>
+              <div class="line html"></div>
+            </div>
+            <div class="bars">
+              <div class="info"><span><i class="fa-brands fa-css3-alt"></i>CSS</span><span class="num">70%</span></div>
+              <div class="line css"></div>
+            </div>
+            <div class="bars">
+              <div class="info"><span><i class="fa-brands fa-js"></i>JavaScript</span><span class="num">80%</span></div>
+              <div class="line js"></div>
+            </div>
+            <div class="bars">
+              <div class="info">
+                <span><i class="fa-brands fa-react"></i>React/React native</span><span class="num">80%</span>
+              </div>
+              <div class="line react"></div>
+            </div>
+            <div class="bars">
+              <div class="info"><span><i class="fa-brands fa-node"></i>Node/Express</span><span class="num">60%</span></div>
+              <div class="line node"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- projects section -->
+    <section class="project" id="project">
+      <div class="container">
+        <h2 class="title">My Projects</h2>
+        <div class="carousel owl-carousel">
+          <div class="card">
+            <div class="box">
+              <img src="./react.png" alt="" />
+              <div class="txt">Tour Me</div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo a quibusdam, labore repellat quidem ea repellendus
+                culpa excepturi, provident voluptates dolorum tempore voluptate!
+                Velit explicabo ipsam quidem eligendi odio perspiciatis?
+              </p>
+              <a href="#" class="btn">Know More</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <img src="./python.jpg" alt="" />
+              <div class="txt">Tour Me</div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo a quibusdam, labore repellat quidem ea repellendus
+                culpa excepturi, provident voluptates dolorum tempore voluptate!
+                Velit explicabo ipsam quidem eligendi odio perspiciatis?
+              </p>
+              <a href="#" class="btn">Know More</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <img src="./html.png" alt="" />
+              <div class="txt">Tour Me</div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo a quibusdam, labore repellat quidem ea repellendus
+                culpa excepturi, provident voluptates dolorum tempore voluptate!
+                Velit explicabo ipsam quidem eligendi odio perspiciatis?
+              </p>
+              <a href="#" class="btn">Know more</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <img src="./html.png" alt="" />
+              <div class="txt">Tour Me</div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo a quibusdam, labore repellat quidem ea repellendus
+                culpa excepturi, provident voluptates dolorum tempore voluptate!
+                Velit explicabo ipsam quidem eligendi odio perspiciatis?
+              </p>
+              <a href="#" class="btn">Know More</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <img src="./html.png" alt="" />
+              <div class="txt">Tour Me</div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo a quibusdam, labore repellat quidem ea repellendus
+                culpa excepturi, provident voluptates dolorum tempore voluptate!
+                Velit explicabo ipsam quidem eligendi odio perspiciatis?
+              </p>
+              <a href="#" class="btn">Know more</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <img src="./html.png" alt="" />
+              <div class="txt">Tour Me</div>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Explicabo a quibusdam, labore repellat quidem ea repellendus
+                culpa excepturi, provident voluptates dolorum tempore voluptate!
+                Velit explicabo ipsam quidem eligendi odio perspiciatis?
+              </p>
+              <a href="#" class="btn">Know More</a>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
