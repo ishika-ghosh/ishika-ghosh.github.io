@@ -174,7 +174,7 @@ section {
       rgba(30, 30, 49, 0.562),
       rgba(10, 2, 31, 0.589)
     ),
-    url("./back.jpg");
+    url("./assets/back.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -320,7 +320,7 @@ section {
       rgba(9, 3, 31, 0.479),
       rgba(0, 0, 5, 0.767)
     ),
-    url("./images.jpg");
+    url("./assets/images.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -389,7 +389,7 @@ section {
 .profile-picture .background {
   height: 92%;
   width: 92%;
-  background: url("./profilepic.jpg");
+  background: url("./assets/profilepic.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -454,7 +454,7 @@ section {
       rgba(9, 3, 31, 0.479),
       rgba(0, 0, 5, 0.767)
     ),
-    url("./banner.jpg");
+    url("./assets/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -702,7 +702,7 @@ section {
       rgba(9, 3, 31, 0.479),
       rgba(0, 0, 5, 0.767)
     ),
-    url("./contactBack.jpg");
+    url("./assets/contactBack.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
