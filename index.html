@@ -11,26 +11,37 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
     />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css" />
 
     <title>PortFolio</title>
   </head>
-  <body>
+  <body onload="myfunc()">
+    <div class="loader" id="loading">
+      <div class="ring"></div>
+      <span>loading...</span>
+    </div>
+    <div class="scroll-up-button" id="scroll-btn">
+      <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
     <nav class="navbar" id="navbarId">
       <div class="container">
         <div class="logo">
-          <a href="#">Portfo<span>lio.</span></a>
+          <a href="#"><img src="./Free_Sample_By_Wix (1).jpg" alt="" /></a>
         </div>
         <ul class="menu" id="menuId">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#project">Projects</a></li>
-          <li><a href="#">contact Me</a></li>
+          <li><a href="#home" onclick="hidemenu()">Home</a></li>
+          <li><a href="#about" onclick="hidemenu()">About Me</a></li>
+          <li><a href="#skills" onclick="hidemenu()">Skills</a></li>
+          <li><a href="#project" onclick="hidemenu()">Projects</a></li>
+          <li><a href="#contact" onclick="hidemenu()">Contact Me</a></li>
         </ul>
         <div class="menu-btn" onclick="showmenu()">
           <i class="fa-solid fa-bars" id="menubar"></i>
@@ -40,10 +51,15 @@
     <!-- home Section -->
     <section class="home" id="home">
       <div class="container">
-        <div class="txt-content">
+        <div
+          class="txt-content"
+          data-aos="fade-right"
+          data-aos-delay="0"
+          data-aos-duration="3000"
+        >
           <div class="txt1">Hey there!!!My name is</div>
           <div class="txt2">Ishika Ghosh</div>
-          <div class="txt3">I am a <span>Web Developer.</span></div>
+          <div class="txt3">I am a <span class="typing"></span></div>
           <a href="#" class="btn">Hire Me</a>
         </div>
       </div>
@@ -51,29 +67,31 @@
     <!-- about section -->
     <section class="about" id="about">
       <div class="container">
-        <h2 class="title">About Me</h2>
+        <h2 class="title" data-aos="fade-up">About Me</h2>
 
         <div class="about-content">
-          <div class="col-left">
+          <div class="col-left" data-aos="fade-up-right" data-aos-offset="200">
             <div class="profile-picture">
               <!-- <img src="./myImg.jpg" alt="" /> -->
               <div class="background"></div>
             </div>
           </div>
-          <div class="col-right">
-            <h2 class="heading">Know about me <span>Development</span></h2>
+          <div class="col-right" data-aos="fade-up-left" data-aos-offset="100">
+            <h2 class="heading">I am <span class="typing-2"></span></h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi
-              corrupti voluptate natus illum aperiam doloribus asperiores
-              laborum ad alias est quisquam libero esse, nam officia odio
-              corporis eaque sapiente accusantium! Perspiciatis doloremque
-              reprehenderit tenetur, amet ab quas suscipit repellendus et
-              officiis vel asperiores id, ipsum architecto, enim nisi nihil ad.
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Provident at rerum sunt enim sapiente odio, veritatis assumenda
-              pariatur minima aliquid.
+              I am Ishika Ghosh currently pursuing B.tech degree in Computer
+              Science and Engineering. I love to explore new technologies, I am
+              a hardworking and determined candidate eager to gather real-life
+              project experiences. I am experienced in JavaScript more
+              specifically in React JS. I am interested in gathering experience
+              in front-end as well as backend development.
             </p>
-            <a href="#" class="btn">Download CV</a>
+            <a
+              href="https://drive.google.com/file/d/1w5nMsGYJ1e307VJ1LHvh9xnXKsI8eMWe/view?usp=sharing"
+              class="btn"
+              target="blank"
+              >Download CV</a
+            >
           </div>
         </div>
       </div>
@@ -81,43 +99,70 @@
     <!-- skill section -->
     <section class="skills" id="skills">
       <div class="container">
-        <h2 class="title">My Skills</h2>
+        <h2 class="title" data-aos="fade-up">My Skills</h2>
         <div class="skill-content">
-          <div class="column-left">
+          <div
+            class="column-left"
+            data-aos="fade-up-right"
+            data-aos-offset="200"
+          >
             <h2 class="heading">About my Knowledge and experience</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Assumenda, possimus nulla. Quasi minus accusantium minima optio
-              beatae architecto nesciunt maxime quia reprehenderit, doloribus
-              molestiae voluptate dolore praesentium vero voluptatum sed
-              consequuntur fugiat fugit non veritatis. Praesentium ea culpa
-              impedit repellendus debitis rem? Vitae quo ipsa sint veniam ab eos
-              molestiae.
+              I have currently no Industrial experience. But I am learning and
+              exploring web development field and gathering new ideas and
+              knowledge about so many new technologies,frameworks,
+              libraries,deployments. I am specifically comfortable with
+              <b>React.js </b>in case of front-end as well as <b>HTML</b>,
+              <b>CSS</b>, <b>JavaScript</b>. And in order to backend development
+              I would rather go with <b>Node.js</b>. I have also some pretty
+              good knowledge of python. I love competitive programming and
+              problem solving in different platforms like <b>leetCode</b>,
+              <b>CodeForces</b>.
             </p>
-            <a href="#" class="btn">Know More</a>
+            <a href="#project" class="btn">My projects</a>
           </div>
-          <div class="column-right">
+          <div
+            class="column-right"
+            id="col"
+            data-aos="fade-up-left"
+            data-aos-offset="200"
+          >
             <div class="bars">
-              <div class="info"><span><i class="fa-brands fa-html5" style="color: white;"></i>HTML</span><span class="num">90%</span></div>
-              <div class="line html"></div>
-            </div>
-            <div class="bars">
-              <div class="info"><span><i class="fa-brands fa-css3-alt"></i>CSS</span><span class="num">70%</span></div>
-              <div class="line css"></div>
-            </div>
-            <div class="bars">
-              <div class="info"><span><i class="fa-brands fa-js"></i>JavaScript</span><span class="num">80%</span></div>
-              <div class="line js"></div>
+              <div class="info">
+                <span
+                  ><i class="fa-brands fa-html5" style="color: white"></i
+                  >HTML</span
+                ><span class="num">90%</span>
+              </div>
+              <div class="line html" id="line"></div>
             </div>
             <div class="bars">
               <div class="info">
-                <span><i class="fa-brands fa-react"></i>React/React native</span><span class="num">80%</span>
+                <span><i class="fa-brands fa-css3-alt"></i>CSS</span
+                ><span class="num">70%</span>
               </div>
-              <div class="line react"></div>
+              <div class="line css" id="line"></div>
             </div>
             <div class="bars">
-              <div class="info"><span><i class="fa-brands fa-node"></i>Node/Express</span><span class="num">60%</span></div>
-              <div class="line node"></div>
+              <div class="info">
+                <span><i class="fa-brands fa-js"></i>JavaScript</span
+                ><span class="num">80%</span>
+              </div>
+              <div class="line js" id="line"></div>
+            </div>
+            <div class="bars">
+              <div class="info">
+                <span><i class="fa-brands fa-react"></i>React/React native</span
+                ><span class="num">80%</span>
+              </div>
+              <div class="line react" id="line"></div>
+            </div>
+            <div class="bars">
+              <div class="info">
+                <span><i class="fa-brands fa-node"></i>Node/Express</span
+                ><span class="num">60%</span>
+              </div>
+              <div class="line node" id="line"></div>
             </div>
           </div>
         </div>
@@ -125,25 +170,89 @@
     </section>
     <!-- projects section -->
     <section class="project" id="project">
-      <div class="container">
+      <div class="container" data-aos="fade-up">
         <h2 class="title">My Projects</h2>
         <div class="carousel owl-carousel">
           <div class="card">
             <div class="box">
-              <img src="./react.png" alt="" />
+              <img src="./tourme.png" alt="" />
               <div class="txt">Tour Me</div>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Explicabo a quibusdam, labore repellat quidem ea repellendus
-                culpa excepturi, provident voluptates dolorum tempore voluptate!
-                Velit explicabo ipsam quidem eligendi odio perspiciatis?
+                It is a travel guiding website.Me along with three other team
+                members ,leaded by me made it when we have participated in a
+                hackathon organised by our college <b>startUp club</b>. And we
+                won the hackathon.We have used mainly <b>react js</b> js for the
+                front-end,<b>Firebase</b> for database,<b>Material-UI </b> for
+                some styling,<b>Rapid API </b>to fetch the data of hotels
+                restaurants ,<b>MapBox</b> to show the map. We have used netlify
+                to host our site.
               </p>
-              <a href="#" class="btn">Know More</a>
+              <div class="btn-content">
+                <button class="tech-btn">ReactJs</button>
+                <button class="tech-btn">RapidApi</button>
+                <button class="tech-btn">Firebase</button>
+                <button class="tech-btn">MaterialUI</button>
+              </div>
+              <a href="https://tour-me.netlify.app/" target="blank" class="btn"
+                >VISIT SITE</a
+              >
             </div>
           </div>
           <div class="card">
             <div class="box">
-              <img src="./python.jpg" alt="" />
+              <img src="./myImg.jpg" alt="" />
+              <div class="txt">Anime World</div>
+              <p>
+                Being a big fan of anime movies and series,I made a website of
+                this anime movies with<b> YouTube clone</b>. When I started
+                learning <b>HTML</b> <b>CSS</b> <b>JavaScript</b> at the early
+                days of my college. I have used <b>Rapid Api</b>to fetch data
+                data of videos for the animes. It is kind of blogging site with
+                excellent user Interface. I used <b>Netlify</b> for hosting my
+                site. I am still working on it to make it better and adding new
+                features day by day.
+              </p>
+
+              <div class="btn-content">
+                <button class="tech-btn">HTML</button>
+                <button class="tech-btn">CSS</button>
+                <button class="tech-btn">JavaScript</button>
+                <button class="tech-btn">RapidAPI</button>
+              </div>
+              <a
+                href="https://animation-world.netlify.app/"
+                class="btn"
+                target="blank"
+                >VISIT SITE</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <img src="./hyouka.jpg" alt="" />
+              <div class="txt">Hyouka BOT</div>
+              <p>
+                It is a discord Music bot build with <b>Python discord.py</b>.
+                It can play music from youtube link. I have used<b
+                  >Youtube-dl</b
+                >
+                python library for implementationof this feature. Besides that
+                the bot can also play music from the previously stored
+                playlists. It also has timer system with it ,the music will
+                automatically stopped after the certain time you have set. I
+                have used <b>Heroku</b> platform to make the bot online 24/7.
+              </p>
+              <div class="btn-content">
+                <button class="tech-btn">Python</button>
+                <button class="tech-btn">Discord</button>
+                <button class="tech-btn">Heroku</button>
+              </div>
+              <a href="#" class="btn">KNOW MORE</a>
+            </div>
+          </div>
+          <!-- <div class="card">
+            <div class="box">
+              <img src="./html.png" alt="" />
               <div class="txt">Tour Me</div>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -153,8 +262,8 @@
               </p>
               <a href="#" class="btn">Know More</a>
             </div>
-          </div>
-          <div class="card">
+          </div> -->
+          <!-- <div class="card">
             <div class="box">
               <img src="./html.png" alt="" />
               <div class="txt">Tour Me</div>
@@ -166,8 +275,8 @@
               </p>
               <a href="#" class="btn">Know more</a>
             </div>
-          </div>
-          <div class="card">
+          </div> -->
+          <!-- <div class="card">
             <div class="box">
               <img src="./html.png" alt="" />
               <div class="txt">Tour Me</div>
@@ -179,37 +288,127 @@
               </p>
               <a href="#" class="btn">Know More</a>
             </div>
-          </div>
-          <div class="card">
-            <div class="box">
-              <img src="./html.png" alt="" />
-              <div class="txt">Tour Me</div>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Explicabo a quibusdam, labore repellat quidem ea repellendus
-                culpa excepturi, provident voluptates dolorum tempore voluptate!
-                Velit explicabo ipsam quidem eligendi odio perspiciatis?
-              </p>
-              <a href="#" class="btn">Know more</a>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- contact section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="title">Contact me</h2>
+        <div class="contact-content">
+          <div class="column-left" data-aos="fade-up-right">
+            <div class="text">Get in <span>touch</span></div>
+            <p>
+              Let me know what you exactly need in your application, an
+              excellent user interface or anything else. I am here to satisfy
+              you. Call me or email me or DM me on any social media platform.
+            </p>
+            <div class="icons">
+              <div class="row">
+                <i class="fa-solid fa-user"></i>
+                <div class="information">
+                  <div class="head">Name</div>
+                  <div class="sub-info">Ishika Ghosh</div>
+                </div>
+              </div>
+              <div class="row">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="information">
+                  <div class="head">Adsress</div>
+                  <div class="sub-info">Howrah,West Bengal,India</div>
+                </div>
+              </div>
+              <div class="row">
+                <i class="fa-solid fa-envelope"></i>
+                <div class="information">
+                  <div class="head">Email</div>
+                  <div class="sub-info">idofishika321@gmail.com</div>
+                </div>
+              </div>
+              <div class="row">
+                <a href="https://www.facebook.com/ishika.ghosh.315428/"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a
+                  href="www.linkedin.com/in/ishika-ghosh-a6a55b236
+"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </div>
             </div>
           </div>
-          <div class="card">
-            <div class="box">
-              <img src="./html.png" alt="" />
-              <div class="txt">Tour Me</div>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Explicabo a quibusdam, labore repellat quidem ea repellendus
-                culpa excepturi, provident voluptates dolorum tempore voluptate!
-                Velit explicabo ipsam quidem eligendi odio perspiciatis?
-              </p>
-              <a href="#" class="btn">Know More</a>
+          <div class="column-right" data-aos="fade-up-left">
+            <div class="formbox">
+              <form id="myForm">
+                <h2>CONTACT ME</h2>
+                <div class="input-box">
+                  <input type="text" required="required" id="name" />
+                  <span>Full Name</span>
+                </div>
+                <div class="input-box">
+                  <input type="email" required="required" id="email" />
+                  <span>Your Email Address</span>
+                </div>
+                <div class="input-box">
+                  <textarea required="required" id="message"></textarea>
+                  <span>Type your message</span>
+                </div>
+                <div class="input-box">
+                  <input type="submit" value="SEND" onclick="sendEmails()" />
+                </div>
+              </form>
             </div>
           </div>
         </div>
-      
       </div>
     </section>
+    <footer>
+      Created by
+      <a href="https://github.com/ishika-ghosh" target="blank"
+        >@ishika-ghosh
+      </a>
+      |©2022 all rights are reserved.
+    </footer>
     <script src="./script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        delay: 50,
+        duration: 2000,
+        mirror: true,
+        ease: "ease-out-back",
+      });
+      var load = document.getElementById("loading");
+      function myfunc() {
+        load.style.display = "none";
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      function sendEmails() {
+        var tempParams = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          message: document.getElementById("message").value,
+        };
+        emailjs
+          .send(
+            "service_aup68ri",
+            "template_hvt86cw",
+            tempParams,
+            "user_DHy3pvYM1HO3VsKODw8SK"
+          )
+          .then(function (res) {
+            console.log("success", res.status);
+          });
+        document.getElementById("myForm").reset();
+      }
+    </script>
   </body>
 </html>

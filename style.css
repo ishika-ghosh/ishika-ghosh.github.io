@@ -1,10 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&family=Poppins:ital,wght@0,200;0,600;1,300&family=Ubuntu:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap");
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
+#loading {
+  position: fixed;
+  background: black;
+  z-index: 999999;
+  color: white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ring {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: ring 2s linear infinite;
+}
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px #e65c00;
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px #18b201;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px #0456c8;
+  }
+}
+.ring::before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.384);
+}
+.loader span {
+  color: #737373;
+  font-size: 30px;
+}
 section {
   overflow: hidden;
+}
+.scroll-up-button {
+  position: fixed;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  background-color: crimson;
+  color: white;
+  bottom: 30px;
+  right: 30px;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 6px;
+  line-height: 45px;
+  z-index: 9999;
+  opacity: 0;
+  animation: up 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes up {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.scroll-up-button.show {
+  opacity: 1;
+}
+.scroll-up-button a {
+  text-decoration: none;
+  color: white;
 }
 /* navbar styling */
 .navbar {
@@ -36,6 +120,7 @@ section {
   font-weight: 600;
   letter-spacing: 2px;
   color: white;
+  font-family: "Poppins", sans-serif;
 }
 .navbar .container .logo a span {
   color: crimson;
@@ -54,6 +139,7 @@ section {
 }
 
 .navbar .menu li a {
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
   color: white;
   font-size: 25px;
@@ -101,14 +187,17 @@ section {
 }
 .home .container .txt1 {
   font-size: 25px;
+  font-family: "Ubuntu", sans-serif;
 }
 .home .container .txt2 {
   font-size: 75px;
   font-weight: 600;
   letter-spacing: 2px;
+  font-family: "Poppins", sans-serif;
 }
 .home .container .txt3 {
   font-size: 40px;
+  font-family: "Ubuntu", sans-serif;
 }
 .home .container .txt3 span {
   font-size: 45px;
@@ -131,6 +220,7 @@ section {
   z-index: 2;
   text-decoration: none;
   transition: all 0.3s ease;
+  font-family: "IM Fell Double Pica", serif;
 }
 .btn:hover {
   color: crimson;
@@ -199,7 +289,7 @@ section {
     font-size: 32px;
   }
   .home .container .txt3 span {
-    font-size: 35px;
+    font-size: 30px;
   }
   .navbar .container .logo a {
     font-size: 30px;
@@ -219,7 +309,7 @@ section {
     font-size: 20px;
   }
   .home .container .txt3 span {
-    font-size: 25px;
+    font-size: 22px;
   }
 }
 /* about Me */
@@ -241,6 +331,7 @@ section {
   text-align: center;
   font-size: 30px;
   font-weight: 500;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 2px;
   margin-bottom: 60px;
   padding-bottom: 20px;
@@ -267,7 +358,8 @@ section {
   padding: 2px;
 }
 .skill-content,
-.about-content {
+.about-content,
+.contact-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -297,7 +389,7 @@ section {
 .profile-picture .background {
   height: 92%;
   width: 92%;
-  background: url("./myImg.jpg");
+  background: url("./profilepic.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -315,14 +407,17 @@ section {
   font-weight: 600;
   letter-spacing: 2px;
   margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
 }
 .col-right .heading span {
   color: crimson;
+  font-family: "Montserrat", sans-serif;
 }
 .column-left p,
 .col-right p {
   text-align: justify;
   font-size: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 @media (max-width: 961px) {
   .skill-content,
@@ -339,6 +434,12 @@ section {
     padding: 7px;
     margin-top: 60px;
     /* margin-left: 12px; */
+  }
+  .col-right .heading {
+    font-size: 23px;
+  }
+  .col-right p {
+    font-size: 18px;
   }
   .col-left .profile-picture {
     height: 250px;
@@ -401,6 +502,7 @@ section {
   text-align: right;
 }
 .bars .line {
+  display: block;
   width: 100%;
   height: 7px;
   position: relative;
@@ -425,22 +527,27 @@ section {
 .html::before {
   width: 90%;
   animation: html 5s;
+  animation-iteration-count: infinite;
 }
 .css::before {
   width: 70%;
   animation: css 5s;
+  animation-iteration-count: infinite;
 }
 .js::before {
   width: 80%;
   animation: js 5s;
+  animation-iteration-count: infinite;
 }
 .react::before {
   width: 80%;
   animation: react 5s;
+  animation-iteration-count: infinite;
 }
 .node::before {
   width: 60%;
   animation: node 5s;
+  animation-iteration-count: infinite;
 }
 @keyframes html {
   0% {
@@ -506,6 +613,7 @@ section {
   border-radius: 6px;
   text-align: center;
   transition: all 0.3s ease;
+  height: 710px;
 }
 
 .project .carousel .card .box {
@@ -522,6 +630,28 @@ section {
   font-size: 25px;
   font-weight: 600;
   margin: 10px 0px 7px 0px;
+  font-family: "Poppins", sans-serif;
+}
+.project .carousel .card .box p {
+  font-family: "Poppins", sans-serif;
+}
+.project .carousel .card .box .btn-content {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.project .carousel .card .box .btn-content .tech-btn {
+  font-size: 15px;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid #0d4205;
+  border-radius: 16px;
+  color: white;
+  background: #0d4205;
+  /* width: 100%; */
 }
 .project .carousel .card img {
   height: 150px;
@@ -557,4 +687,199 @@ section {
 .owl-carousel button.owl-dot:hover,
 .owl-carousel button.owl-dot.active {
   background-color: crimson;
+}
+@media (max-width: 550px) {
+  .project .title::after {
+    content: "";
+    background: none;
+  }
+}
+/* contact section */
+.contact {
+  padding: 100px 0px;
+  background: linear-gradient(
+      90deg,
+      rgba(9, 3, 31, 0.479),
+      rgba(0, 0, 5, 0.767)
+    ),
+    url("./contactBack.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  background-attachment: fixed;
+}
+.contact .title::after {
+  content: "get in touch";
+}
+.contact .column-right {
+  padding: 10px;
+  box-shadow: none;
+}
+.container .formbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formbox form {
+  position: relative;
+  width: 100%;
+  padding: 0px 0px 0px 75px;
+}
+.formbox form h2 {
+  color: white;
+  font-weight: 500;
+  font-size: 2em;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+.formbox form .input-box {
+  position: relative;
+  margin-bottom: 40px;
+}
+.formbox form .input-box:last-child {
+  margin-bottom: 0px;
+}
+.formbox form .input-box input,
+.formbox form .input-box textarea {
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: white;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 300;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  resize: none;
+}
+.formbox form .input-box textarea {
+  height: 100px;
+}
+.formbox form .input-box input[type="submit"] {
+  background: white;
+  padding: 8px 20px;
+  margin-top: -10px;
+  background: crimson;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  border: none;
+  letter-spacing: 4px;
+}
+.formbox form .input-box input[type="submit"]:focus {
+  background: #1bfaad;
+  color: #111;
+}
+.formbox form .input-box span {
+  position: absolute;
+  left: 0px;
+  font-size: 16px;
+  font-weight: 300;
+  display: inline-block;
+  pointer-events: none;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.5s;
+}
+.formbox form .input-box input:focus ~ span,
+.formbox form .input-box textarea:focus ~ span,
+.formbox form .input-box input:valid ~ span,
+.formbox form .input-box textarea:valid ~ span {
+  transform: translateY(-24px);
+  color: #1bfaad;
+  font-size: 14px;
+}
+.formbox form .input-box input:focus,
+.formbox form .input-box textarea:focus,
+.formbox form .input-box input:valid,
+.formbox form .input-box textarea:valid {
+  border-bottom-color: white;
+}
+@media (max-width: 900px) {
+  .formbox form {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    padding: 0px;
+  }
+}
+
+.contact-content .column-left {
+  width: calc(50% - 30px);
+}
+.contact-content .column-left .text {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.contact-content .column-left .text span {
+  color: crimson;
+}
+.contact-content .column-left p {
+  text-align: justify;
+}
+.contact-content .column-left .icons {
+  margin: 10px 0px;
+}
+.contact-content .column-left .icons .row {
+  display: flex;
+  align-items: center;
+  height: 65px;
+}
+.contact-content .column-left .icons .row i {
+  font-size: 25px;
+  color: crimson;
+}
+.contact-content .column-left .icons .row .information {
+  margin-left: 25px;
+}
+.contact-content .column-left .icons .row .information .head {
+  font-size: 15px;
+  font-weight: 600;
+}
+.contact-content .column-left .icons .row:last-child {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.contact-content .column-left .icons .row:last-child a i {
+  font-size: 30px;
+  color: white;
+  margin-right: 20px;
+  transition: all 0.3s ease;
+}
+.contact-content .column-left .icons .row:last-child a i:hover {
+  transform: scale(1.2);
+  color: rgb(199, 56, 85);
+}
+
+@media (max-width: 900px) {
+  .contact-content .column-left {
+    width: 100%;
+    padding: 10px;
+  }
+  .contact-content .column-left .icons {
+    padding: 20px;
+  }
+}
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 12px 0px;
+}
+footer a {
+  text-decoration: none;
+  color: crimson;
+  font-weight: 400;
+}
+@media (max-width: 600px) {
+  footer {
+    font-size: 15px;
+  }
 }
