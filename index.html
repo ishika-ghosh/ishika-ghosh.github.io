@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/869e18f533.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>PortFolio</title>
+  </head>
+  <body onload="myfunc()">
+    <div class="loader" id="loading">
+      <div class="ring"></div>
+      <span>loading...</span>
+    </div>
+    <div class="scroll-up-button" id="scroll-btn">
+      <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+    </div>
+    <nav class="navbar" id="navbarId">
+      <div class="container">
+        <div class="logo">
+          <a href="#"
+            ><img src="./assets/Free_Sample_By_Wix (1).jpg" alt=""
+          /></a>
+        </div>
+        <ul class="menu" id="menuId">
+          <li><a href="#home" onclick="hidemenu()">Home</a></li>
+          <li><a href="#about" onclick="hidemenu()">About Me</a></li>
+          <li><a href="#skills" onclick="hidemenu()">Skills</a></li>
+          <li><a href="#project" onclick="hidemenu()">Projects</a></li>
+          <li><a href="#contact" onclick="hidemenu()">Contact Me</a></li>
+        </ul>
+        <div class="menu-btn" onclick="showmenu()">
+          <i class="fa-solid fa-bars" id="menubar"></i>
+        </div>
+      </div>
+    </nav>
+    <!-- home Section -->
+    <section class="home" id="home">
+      <div class="container">
+        <div
+          class="txt-content"
+          data-aos="fade-right"
+          data-aos-delay="0"
+          data-aos-duration="3000"
+        >
+          <div class="txt1">Hey there!!! My name is</div>
+          <div class="txt2">Ishika Ghosh</div>
+          <div class="txt3">I am a <span class="typing"></span></div>
+          <a href="#" class="btn">Hire Me</a>
+        </div>
+      </div>
+    </section>
+    <!-- about section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="title" data-aos="fade-up">About Me</h2>
+
+        <div class="about-content">
+          <div class="col-left" data-aos="fade-up-right" data-aos-offset="200">
+            <div class="profile-picture">
+              <!-- <img src="./myImg.jpg" alt="" /> -->
+              <div class="background"></div>
+            </div>
+          </div>
+          <div class="col-right" data-aos="fade-up-left" data-aos-offset="100">
+            <h2 class="heading">I am <span class="typing-2"></span></h2>
+            <p>
+              I am Ishika Ghosh currently pursuing B.tech degree in Computer
+              Science and Engineering. I love to explore new technologies, I am
+              a hardworking and determined candidate eager to gather real-life
+              project experiences. I am experienced in JavaScript more
+              specifically in React JS. I am interested in gathering experience
+              in front-end as well as backend development.
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1ozwGSrA1-93ETpG0SHfmMalACqfTue-2/view?usp=sharing"
+              class="btn"
+              target="blank"
+              >View CV</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skill section -->
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="title" data-aos="fade-up">My Skills</h2>
+        <div class="skill-content">
+          <div
+            class="column-left"
+            data-aos="fade-up-right"
+            data-aos-offset="200"
+          >
+            <h2 class="heading">About my Knowledge and experience</h2>
+            <p>
+              Hello!! I am Ishika Ghosh, a Highly motivated and dedicated
+              Computer Science & Engineering student with a strong academic
+              background and a passion for programming. Currently pursuing a
+              B.Tech degree in Computer Science & Engineering from MCKV
+              Institute of Engineering, where I have maintained an exceptional
+              <strong>CGPA of 9.86</strong>. I consistently strive for
+              excellence in my work and enjoy
+              <strong>solving complex problems</strong> through logical and
+              analytical thinking. I am eager to leverage my knowledge and
+              skills, along with my achievements, to contribute to the growth
+              and success of an innovative organization. I am a
+              <b>quick learner</b>, a team player, and possess excellent
+              communication skills. I am open to exciting opportunities that
+              challenge me to expand my horizons in the field of Computer
+              Science & Engineering.
+            </p>
+            <a href="#project" class="btn">My projects</a>
+          </div>
+          <div
+            class="column-right"
+            id="col"
+            data-aos="fade-up-left"
+            data-aos-offset="200"
+          >
+            <ul class="skill-points">
+              <li class="skill-lists">
+                Programming Languages
+                <ul class="skill-list">
+                  <img
+                    src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white"
+                  />
+                  <img
+                    src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"
+                  />
+                  <img
+                    src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white"
+                  />
+                  <img
+                    src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"
+                  />
+                  <img
+                    src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"
+                  />
+                </ul>
+              </li>
+              <li class="skill-lists">
+                Frameworks / Libraries
+                <ul class="skill-list">
+                  <img
+                    src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+                  />
+
+                  <img
+                    src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white"
+                  />
+
+                  <img
+                    src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"
+                  />
+
+                  <img
+                    src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"
+                  />
+
+                  <img
+                    src="https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=mui&logoColor=white"
+                  />
+
+                  <img
+                    src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white"
+                  />
+
+                  <img
+                    src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white"
+                  />
+                </ul>
+              </li>
+              <li class="skill-lists">
+                Database
+                <ul class="skill-list">
+                  <img
+                    src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"
+                  />
+                  <img
+                    src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"
+                  />
+                </ul>
+              </li>
+              <li class="skill-lists">
+                Tools/Platforms
+                <ul class="skill-list">
+                  <img
+                    src="https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white"
+                  />
+                  <img
+                    src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white"
+                  />
+                  <img
+                    src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"
+                  />
+                  <img
+                    src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"
+                  />
+                  <img
+                    src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white"
+                  />
+                  <img
+                    src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white"
+                  />
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- projects section -->
+    <section class="project" id="project">
+      <div class="container" data-aos="fade-up">
+        <h2 class="title">My Projects</h2>
+        <div class="carousel owl-carousel">
+          <div class="card">
+            <div class="box">
+              <img src="./assets/tourme.png" alt="" />
+              <div class="txt">Tour Me</div>
+              <p>
+                It is a travel guiding website.Me along with three other team
+                members ,leaded by me made it when we have participated in a
+                hackathon organised by our college <b>startUp club</b>. And we
+                won the hackathon.We have used mainly <b>react js</b> js for the
+                front-end,<b>Firebase</b> for database,<b>Material-UI </b> for
+                some styling,<b>Rapid API </b>to fetch the data of hotels
+                restaurants ,<b>MapBox</b> to show the map. We have used netlify
+                to host our site.
+              </p>
+              <div class="btn-content">
+                <button class="tech-btn">ReactJs</button>
+                <button class="tech-btn">RapidApi</button>
+                <button class="tech-btn">Firebase</button>
+                <button class="tech-btn">MaterialUI</button>
+              </div>
+              <a href="https://tour-me.netlify.app/" target="blank" class="btn"
+                >VISIT SITE</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <div class="box">
+              <img src="./assets/anime.png" alt="" />
+              <div class="txt">Anime World</div>
+              <p>
+                Being a big fan of anime movies and series,I made a website of
+                this anime movies with<b> YouTube clone</b>. When I started
+                learning <b>HTML</b> <b>CSS</b> <b>JavaScript</b> at the early
+                days of my college. I have used <b>Rapid Api </b>to fetch data
+                data of videos for the animes. It is kind of blogging site with
+                excellent user Interface. I used <b>Netlify</b> for hosting my
+                site. I am still working on it to make it better and adding new
+                features day by day.
+              </p>
+
+              <div class="btn-content">
+                <button class="tech-btn">HTML</button>
+                <button class="tech-btn">CSS</button>
+                <button class="tech-btn">JavaScript</button>
+                <button class="tech-btn">RapidAPI</button>
+              </div>
+              <a
+                href="https://animation-world.netlify.app/"
+                class="btn"
+                target="blank"
+                >VISIT SITE</a
+              >
+            </div>
+          </div>
+          <!-- <div class="card">
+            <div class="box">
+              <img src="./assets/hyouka.jpg" alt="" />
+              <div class="txt">Hyouka BOT</div>
+              <p>
+                It is a discord Music bot build with <b>Python discord.py</b>.
+                It can play music from youtube link. I have used<b> yt-dlp</b
+                ><b> spot-dl</b> python library for implementationof this
+                feature. Besides that the bot can also play music from the
+                previously stored playlists. It also has timer system with it
+                ,the music will automatically stopped after the certain time you
+                have set.
+              </p>
+              <div class="btn-content">
+                <button class="tech-btn">Python</button>
+                <button class="tech-btn">Discord</button>
+                <button class="tech-btn">Heroku</button>
+              </div>
+              <a href="#" class="btn">KNOW MORE</a>
+            </div>
+          </div> -->
+          <div class="card">
+            <div class="box">
+              <img src="./assets/memories.png" alt="" />
+              <div class="txt">TreasuredTales</div>
+              <p>
+                TreasuredTales is a captivating web app designed to help you
+                <strong> store, share, and cherish </strong>your most treasured
+                memories and stories with others.With TreasuredTales, you can
+                create a virtual space where you can store your memories.The app
+                allows you to connect and collaborate with other users by
+                creating groups, enabling you to share and celebrate common
+                memories together serves as a digital vault to safeguard your
+                precious tales.
+                <br />
+                <a
+                  target="_blank"
+                  href="https://github.com/ishika-ghosh/TreasuredTales"
+                  class="git-hub"
+                  >GitHub</a
+                >
+              </p>
+              <div class="btn-content">
+                <button class="tech-btn">ReactJs</button>
+                <button class="tech-btn">Express</button>
+                <button class="tech-btn">MongoDB</button>
+                <button class="tech-btn">Redux</button>
+              </div>
+              <a
+                href="https://treasured-tales-5998.vercel.app/"
+                target="blank"
+                class="btn"
+                >VISIT SITE</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="title">Contact me</h2>
+        <div class="contact-content">
+          <div class="column-left" data-aos="fade-up-right">
+            <div class="text">Get in <span>touch</span></div>
+            <p>
+              Let me know what you exactly need in your application, an
+              excellent user interface or anything else. I am here to satisfy
+              you. Call me or email me or DM me on any social media platform.
+            </p>
+            <div class="icons">
+              <div class="row">
+                <i class="fa-solid fa-user"></i>
+                <div class="information">
+                  <div class="head">Name</div>
+                  <div class="sub-info">Ishika Ghosh</div>
+                </div>
+              </div>
+              <div class="row">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="information">
+                  <div class="head">Adsress</div>
+                  <div class="sub-info">Howrah,West Bengal,India</div>
+                </div>
+              </div>
+              <div class="row">
+                <i class="fa-solid fa-envelope"></i>
+                <div class="information">
+                  <div class="head">Email</div>
+                  <div class="sub-info">idofishika321@gmail.com</div>
+                </div>
+              </div>
+              <div class="row">
+                <a href="https://www.facebook.com/ishika.ghosh.315428/"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a
+                  href="www.linkedin.com/in/ishika-ghosh-a6a55b236
+"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="column-right" data-aos="fade-up-left">
+            <div class="formbox">
+              <form id="myForm" onsubmit="return false">
+                <h2>CONTACT ME</h2>
+                <div class="input-box">
+                  <input type="text" required="required" id="name" />
+                  <span>Full Name</span>
+                </div>
+                <div class="input-box">
+                  <input type="email" required="required" id="email" />
+                  <span>Your Email Address</span>
+                </div>
+                <div class="input-box">
+                  <textarea required="required" id="message"></textarea>
+                  <span>Type your message</span>
+                </div>
+                <div class="input-box">
+                  <input type="submit" value="SEND" onclick="sendEmails()" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      Created by
+      <a href="https://github.com/ishika-ghosh" target="blank"
+        >@ishika-ghosh
+      </a>
+      |©2022 all rights are reserved.
+    </footer>
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        delay: 50,
+        duration: 2000,
+        // mirror: true,
+        ease: "ease-out-back",
+      });
+      var load = document.getElementById("loading");
+      function myfunc() {
+        load.style.display = "none";
+      }
+    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <!-- <script type="text/javascript">
+      function sendEmails() {
+        const message={
+          name: 
+        }
+      }
+    </script> -->
+  </body>
+</html>
